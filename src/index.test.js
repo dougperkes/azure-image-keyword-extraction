@@ -2,7 +2,7 @@ import {expect} from 'chai';
 import jsdom from 'jsdom';
 import fs from 'fs';
 
-describe('Out first test', () => {
+describe('Our first test', () => {
   it('should pass', () =>  {
     expect(true).to.equal(true);
   })
@@ -14,7 +14,7 @@ describe("index.html", () => {
     const index = fs.readFileSync('./src/index.html', 'utf-8');
     jsdom.env(index, (err, window) => {
       const h1 = window.document.getElementsByTagName('h1')[0];
-      expect(h1.innerHTML).to.equal("Hello World!");
+      expect(h1.innerHTML).to.equal("Extract keywords from image using Azure Cognitive Services");
       done();
       window.close();
     });

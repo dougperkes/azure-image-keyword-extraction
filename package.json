@@ -17,6 +17,9 @@
   "author": "Doug Perkes",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "express-fileupload": "^0.1.2",
+    "unique-filename": "^1.1.0",
     "whatwg-fetch": "2.0.3"
   },
   "devDependencies": {

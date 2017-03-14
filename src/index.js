@@ -4,6 +4,20 @@ import './index.css';
 // const courseValue = numeral(1000).format('$0,0.00');
 // console.log(`I would pay ${courseValue} for this awesome course!`);
 
+var computerVisionApiKey; // eslint-disable-line no-unused-vars
+window.onload = function() {
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListenser);
+    oReq.open("GET", '/computerVisionApiKey');
+    oReq.send();
+}
+
+function reqListenser() {
+    console.log(this.responseText);
+    var res = JSON.parse(this.responseText);
+    computerVisionApiKey = res.key;
+}
+
 var uploadfiles = document.querySelector('#imageToProcess');
 uploadfiles.addEventListener('change', function () {
     var files = this.files;

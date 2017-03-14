@@ -5,7 +5,7 @@
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
     "start": "npm-run-all --parallel security-check open:src lint:watch test:watch",
-    "open:src": "babel-node buildScripts/srcServer.js",
+    "open:src": "babel-node buildScripts/srcServer.js -- --watch",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3001",
     "share": "npm-run-all --parallel open:src localtunnel",
@@ -17,8 +17,15 @@
   "author": "Doug Perkes",
   "license": "MIT",
   "dependencies": {
+    "azure-storage": "^2.1.0",
     "bootstrap": "^3.3.7",
+    "cognitive-services": "^0.1.0",
+    "dotenv": "^4.0.0",
     "express-fileupload": "^0.1.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.1.1",
     "unique-filename": "^1.1.0",
     "whatwg-fetch": "2.0.3"
   },
